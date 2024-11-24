@@ -6,7 +6,7 @@
 /*   By: kmuhlbau <kmuhlbau@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/15 21:58:39 by kmuhlbau          #+#    #+#             */
-/*   Updated: 2024/11/06 13:33:00 by kmuhlbau         ###   ########.fr       */
+/*   Updated: 2024/11/24 21:56:52 by kmuhlbau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,7 @@ char				*ft_strrchr(const char *s, int c);
 char				*ft_strtrim(char const *s1, char const *set);
 int					ft_tolower(int c);
 int					ft_toupper(int c);
+int					ft_strcmp(const char *s1, const char *s2);
 
 typedef struct s_list
 {
