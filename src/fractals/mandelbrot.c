@@ -6,14 +6,32 @@
 /*   By: kmuhlbau <kmuhlbau@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/23 17:18:19 by kmuhlbau          #+#    #+#             */
-/*   Updated: 2024/11/24 19:14:54 by kmuhlbau         ###   ########.fr       */
+/*   Updated: 2024/11/24 23:45:25 by kmuhlbau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
 
-void	render_mandelbrot(t_fract_data *fract_data)
+int	get_mandelbrot_color(int x, int y)
 {
-	(void)fract_data;
-	return ;
+	double	c_re;
+	double	c_im;
+	double	z_re;
+	double	z_im;
+	double	tmp;
+	int		i;
+
+	c_re = (x - WIDTH / 2.0) * 4.0 / WIDTH;
+	c_im = (y - HEIGHT / 2.0) * 4.0 / HEIGHT;
+	z_re = 0;
+	z_im = 0;
+	i = 0;
+	while (z_re * z_re + z_im * z_im < 4 && i < 100)
+	{
+		tmp = z_re;
+		z_re = z_re * z_re - z_im * z_im + c_re;
+		z_im = 2 * tmp * z_im + c_im;
+		i++;
+	}
+	return (i * 255 / 100);
 }

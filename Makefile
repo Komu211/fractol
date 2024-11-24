@@ -14,6 +14,8 @@ SRCS = main.c \
 		mandelbrot.c \
 		keypress.c \
 		scrolling.c \
+		input_handler.c \
+		view.c
 
 
 # Object files
