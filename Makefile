@@ -6,12 +6,14 @@ OUT_DIR = out
 LIBFT_DIR = libft
 LIBFT = $(LIBFT_DIR)/libft.a
 
-
-
-VPATH = $(SRC_DIR)
+VPATH = $(SRC_DIR):$(SRC_DIR)/handlers:$(SRC_DIR)/fractals:$(SRC_DIR)/events
 
 # Main program sources
-SRCS = main.c
+SRCS = main.c \
+		julia.c \
+		mandelbrot.c \
+		keypress.c \
+		scrolling.c \
 
 
 # Object files
@@ -19,8 +21,8 @@ OBJS = $(addprefix $(OUT_DIR)/, $(SRCS:.c=.o))
 
 # Compiler settings
 CC = cc
-CFLAGS = -Wall -Wextra -Werror -Ofast 
-INCLUDES = -I$(LIBFT_DIR)/includes -I. -IMLX42
+CFLAGS = -Wall -Wextra -Werror -Ofast -fsanitize=address
+INCLUDES = -I$(LIBFT_DIR)/includes -I. -Iincludes -IMLX42/include/MLX42
 
 MLXFLAGS = -L/opt/homebrew/opt/glfw/lib -lglfw -framework OpenGL
 
@@ -49,13 +51,12 @@ $(OUT_DIR)/%.o: %.c
 clean:
 		rm -rf $(OUT_DIR)
 		@make -C $(LIBFT_DIR) clean
+		rm -rf MLX42
 
 
 fclean: clean
 		rm -f $(NAME)
 		@make -C $(LIBFT_DIR) fclean
-		rm -rf MLX42
-
 
 re: fclean all
 
