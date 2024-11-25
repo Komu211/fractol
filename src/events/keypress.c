@@ -6,7 +6,7 @@
 /*   By: kmuhlbau <kmuhlbau@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/24 15:20:34 by kmuhlbau          #+#    #+#             */
-/*   Updated: 2024/11/25 13:48:50 by kmuhlbau         ###   ########.fr       */
+/*   Updated: 2024/11/25 13:57:57 by kmuhlbau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,10 @@ void	handle_keypress(void *param)
 	if (!mlx)
 		return ;
 	if (mlx_is_key_down(mlx, MLX_KEY_ESCAPE))
+	{
 		mlx_close_window(mlx);
+		return ;
+	}
 	else if (mlx_is_key_down(mlx, MLX_KEY_RIGHT) || mlx_is_key_down(mlx,
 			MLX_KEY_D))
 		fract_data->x_offset += 0.1 / fract_data->zoom;

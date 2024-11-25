@@ -6,7 +6,7 @@
 /*   By: kmuhlbau <kmuhlbau@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/23 11:58:49 by kmuhlbau          #+#    #+#             */
-/*   Updated: 2024/11/25 13:03:36 by kmuhlbau         ###   ########.fr       */
+/*   Updated: 2024/11/25 15:03:27 by kmuhlbau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,9 +38,10 @@ typedef struct s_fract_data
 	double			zoom;
 	double			x_offset;
 	double			y_offset;
+	double			julia_re;
+	double			julia_im;
 }					t_fract_data;
 
-void				render_julia(void);
 void				handle_keypress(void *param);
 void				handle_scroll(double xdelta, double ydelta, void *param);
 int					handle_args(int argc, char **argv,
@@ -48,5 +49,7 @@ int					handle_args(int argc, char **argv,
 void				render_fractal(t_fract_data *fract_data);
 int					mandelbrot(int x, int y, t_fract_data *fract_data);
 void				init_fract_data(t_fract_data *fract_data);
+int					julia(int x, int y, t_fract_data *fract_data,
+						double fixed_re, double fixed_im);
 
 #endif
