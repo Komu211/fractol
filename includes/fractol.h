@@ -6,7 +6,7 @@
 /*   By: kmuhlbau <kmuhlbau@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/23 11:58:49 by kmuhlbau          #+#    #+#             */
-/*   Updated: 2024/11/25 01:03:15 by kmuhlbau         ###   ########.fr       */
+/*   Updated: 2024/11/25 10:37:53 by kmuhlbau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,13 +37,12 @@ typedef struct s_fract_data
 	t_fract_type	type;
 }					t_fract_data;
 
-void				render_mandelbrot(t_fract_data *fract_data);
 void				render_julia(void);
 void				handle_keypress(void *param);
 void				handle_scroll(double xdelta, double ydelta, void *param);
 int					handle_args(int argc, char **argv,
 						t_fract_data *fract_data);
 void				render_fractal(t_fract_data *fract_data);
-int					get_mandelbrot_color(int x, int y);
+int					mandelbrot(int x, int y);
 
 #endif

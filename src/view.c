@@ -6,7 +6,7 @@
 /*   By: kmuhlbau <kmuhlbau@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/24 17:58:36 by kmuhlbau          #+#    #+#             */
-/*   Updated: 2024/11/25 01:05:13 by kmuhlbau         ###   ########.fr       */
+/*   Updated: 2024/11/25 10:36:47 by kmuhlbau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	render_fractal(t_fract_data *fract_data)
 {
 	int	x;
 	int	y;
-	int	color;
+	int	escape_time;
 
 	y = 0;
 	while (y < HEIGHT)
@@ -25,12 +25,12 @@ void	render_fractal(t_fract_data *fract_data)
 		while (x < WIDTH)
 		{
 			if (fract_data->type == FRACTAL_MANDELBROT)
-				color = get_mandelbrot_color(x, y);
+				escape_time = mandelbrot(x, y);
 			// else if (fract_data->type == FRACTAL_JULIA)
-			//	color = get_julia_color(x, y);
+			//	escape_time = get_julia_color(x, y);
 			// else if (fract_data->type == FRACTAL_BURNING_SHIP)
-			//	color = get_burning_ship_color(x, y);
-			mlx_put_pixel(fract_data->img, x, y, color);
+			//	escape_time = get_burning_ship_color(x, y);
+			mlx_put_pixel(fract_data->img, x, y, escape_time);
 			x++;
 		}
 		y++;
