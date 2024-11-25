@@ -15,7 +15,8 @@ SRCS = main.c \
 	keypress.c \
 	scrolling.c \
 	input_handler.c \
-	view.c
+	view.c \
+	data_initializer.c
 
 
 # Object files

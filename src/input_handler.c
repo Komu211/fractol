@@ -6,7 +6,7 @@
 /*   By: kmuhlbau <kmuhlbau@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/24 18:08:17 by kmuhlbau          #+#    #+#             */
-/*   Updated: 2024/11/24 22:42:46 by kmuhlbau         ###   ########.fr       */
+/*   Updated: 2024/11/25 12:48:16 by kmuhlbau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,6 @@ int	handle_args(int argc, char **argv, t_fract_data *fract_data)
 		ft_printf("Usage: ./fractol [mandelbrot/julia/burning_ship]\n");
 		return (EXIT_FAILURE);
 	}
+	init_fract_data(fract_data);
 	return (EXIT_SUCCESS);
 }

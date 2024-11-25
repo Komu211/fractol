@@ -6,7 +6,7 @@
 /*   By: kmuhlbau <kmuhlbau@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/23 11:58:49 by kmuhlbau          #+#    #+#             */
-/*   Updated: 2024/11/25 10:37:53 by kmuhlbau         ###   ########.fr       */
+/*   Updated: 2024/11/25 13:03:36 by kmuhlbau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,9 @@ typedef struct s_fract_data
 	mlx_t			*mlx;
 	mlx_image_t		*img;
 	t_fract_type	type;
+	double			zoom;
+	double			x_offset;
+	double			y_offset;
 }					t_fract_data;
 
 void				render_julia(void);
@@ -43,6 +46,7 @@ void				handle_scroll(double xdelta, double ydelta, void *param);
 int					handle_args(int argc, char **argv,
 						t_fract_data *fract_data);
 void				render_fractal(t_fract_data *fract_data);
-int					mandelbrot(int x, int y);
+int					mandelbrot(int x, int y, t_fract_data *fract_data);
+void				init_fract_data(t_fract_data *fract_data);
 
 #endif

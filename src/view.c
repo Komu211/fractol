@@ -6,7 +6,7 @@
 /*   By: kmuhlbau <kmuhlbau@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/24 17:58:36 by kmuhlbau          #+#    #+#             */
-/*   Updated: 2024/11/25 10:36:47 by kmuhlbau         ###   ########.fr       */
+/*   Updated: 2024/11/25 13:38:25 by kmuhlbau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	render_fractal(t_fract_data *fract_data)
 		while (x < WIDTH)
 		{
 			if (fract_data->type == FRACTAL_MANDELBROT)
-				escape_time = mandelbrot(x, y);
+				escape_time = mandelbrot(x, y, fract_data);
 			// else if (fract_data->type == FRACTAL_JULIA)
 			//	escape_time = get_julia_color(x, y);
 			// else if (fract_data->type == FRACTAL_BURNING_SHIP)
@@ -35,5 +35,4 @@ void	render_fractal(t_fract_data *fract_data)
 		}
 		y++;
 	}
-	fract_data->img = mlx_new_image(fract_data->mlx, WIDTH, HEIGHT);
 }
