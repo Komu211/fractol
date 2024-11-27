@@ -6,7 +6,7 @@
 /*   By: kmuhlbau <kmuhlbau@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/24 18:08:17 by kmuhlbau          #+#    #+#             */
-/*   Updated: 2024/11/25 15:04:00 by kmuhlbau         ###   ########.fr       */
+/*   Updated: 2024/11/27 14:57:28 by kmuhlbau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	handle_args(int argc, char **argv, t_fract_data *fract_data)
 {
-	if (argc != 2)
+	if (argc != 2 && argc != 4)
 	{
 		ft_printf("Usage: ./fractol [mandelbrot/julia/burning_ship]\n");
 		return (EXIT_FAILURE);
