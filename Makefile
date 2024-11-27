@@ -6,7 +6,7 @@ OUT_DIR = out
 LIBFT_DIR = libft
 LIBFT = $(LIBFT_DIR)/libft.a
 
-VPATH = $(SRC_DIR):$(SRC_DIR)/handlers:$(SRC_DIR)/fractals:$(SRC_DIR)/events
+VPATH = $(SRC_DIR):$(SRC_DIR)/handlers:$(SRC_DIR)/fractals:$(SRC_DIR)/events:$(SRC_DIR)/window
 
 # Main program sources
 SRCS = main.c \
@@ -16,8 +16,8 @@ SRCS = main.c \
 	scrolling.c \
 	input_handler.c \
 	view.c \
-	data_initializer.c
-
+	data_initializer.c \
+	conversion.c
 
 # Object files
 OBJS = $(addprefix $(OUT_DIR)/, $(SRCS:.c=.o))
