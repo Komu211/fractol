@@ -4,7 +4,8 @@ OUT_DIR = out
 
 VPATH = src/string:src/mem:src/put_utils:src/lst:src/printf:src/gnl
 
-STRING_SRCS = ft_atoi.c \
+STRING_SRCS = ft_atof.c \
+		ft_atoi.c \
 		ft_isalnum.c \
 		ft_isalpha.c \
 		ft_isascii.c \
