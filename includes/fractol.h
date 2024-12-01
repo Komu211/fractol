@@ -6,7 +6,7 @@
 /*   By: kmuhlbau <kmuhlbau@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/23 11:58:49 by kmuhlbau          #+#    #+#             */
-/*   Updated: 2024/11/27 22:02:24 by kmuhlbau         ###   ########.fr       */
+/*   Updated: 2024/12/01 18:34:30 by kmuhlbau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ void				init_fract_data(t_fract_data *fract_data, char **argv);
 int					julia(int x, int y, t_fract_data *fract_data,
 						t_complex fixed);
 t_complex			screen_to_plane(int x, int y, t_fract_data *fract_data);
-
+uint32_t			escape_to_color(int escape_iter, int max_iter);
 // int					nova(int x, int y, t_fract_data *fract_data);
 
 #endif
