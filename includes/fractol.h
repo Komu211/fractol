@@ -6,7 +6,7 @@
 /*   By: kmuhlbau <kmuhlbau@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/23 11:58:49 by kmuhlbau          #+#    #+#             */
-/*   Updated: 2024/12/02 16:34:28 by kmuhlbau         ###   ########.fr       */
+/*   Updated: 2024/12/02 21:05:20 by kmuhlbau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,12 @@ typedef enum e_scheme
 	RED,
 	GREEN
 }					t_scheme;
+
+typedef struct s_dimensions
+{
+	int				width;
+	int				height;
+}					t_dimensions;
 
 typedef struct s_fract_data
 {
