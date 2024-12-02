@@ -6,7 +6,7 @@
 /*   By: kmuhlbau <kmuhlbau@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 11:10:14 by kmuhlbau          #+#    #+#             */
-/*   Updated: 2024/11/27 15:32:52 by kmuhlbau         ###   ########.fr       */
+/*   Updated: 2024/12/02 16:13:50 by kmuhlbau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,4 +22,5 @@ void	init_fract_data(t_fract_data *fract_data, char **argv)
 		fract_data->julia.re = ft_atof(argv[2]);
 		fract_data->julia.im = ft_atof(argv[3]);
 	}
+	fract_data->scheme = BLUE;
 }
