@@ -6,7 +6,7 @@
 /*   By: kmuhlbau <kmuhlbau@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/27 21:59:58 by kmuhlbau          #+#    #+#             */
-/*   Updated: 2024/11/28 14:10:56 by kmuhlbau         ###   ########.fr       */
+/*   Updated: 2024/12/02 20:23:37 by kmuhlbau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ t_complex	screen_to_plane(int x, int y, t_fract_data *fract_data)
 
 	int width = fract_data->mlx->width;   // Get current window width
 	int height = fract_data->mlx->height; // Get current window height
+	if (WIDTH < width || HEIGHT < height)
+		mlx_resize_image(fract_data->img, width, height);
 	aspect_ratio = (double)width / height;
 	scale = 4.0;
 	if (aspect_ratio > 1.0)
