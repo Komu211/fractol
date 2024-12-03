@@ -18,7 +18,8 @@ SRCS = main.c \
 	view.c \
 	data_initializer.c \
 	conversion.c \
-	color.c
+	color.c \
+	burning_ship.c
 
 # Object files
 OBJS = $(addprefix $(OUT_DIR)/, $(SRCS:.c=.o))

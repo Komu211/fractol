@@ -6,7 +6,7 @@
 /*   By: kmuhlbau <kmuhlbau@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/23 11:58:49 by kmuhlbau          #+#    #+#             */
-/*   Updated: 2024/12/03 17:21:48 by kmuhlbau         ###   ########.fr       */
+/*   Updated: 2024/12/03 21:43:33 by kmuhlbau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ typedef enum e_fract_type
 {
 	FRACTAL_MANDELBROT,
 	FRACTAL_JULIA,
-	FRACTAL_NOVA
+	FRACTAL_BURNING_SHIP
 }					t_fract_type;
 
 typedef enum e_scheme
@@ -73,6 +73,7 @@ int					julia(int x, int y, t_fract_data *fract_data,
 t_complex			screen_to_plane(int x, int y, t_fract_data *fract_data);
 uint32_t			escape_to_color(int escape_iter, int max_iter,
 						t_fract_data *fract_data);
+int					burning_ship(int x, int y, t_fract_data *fract_data);
 // int					nova(int x, int y, t_fract_data *fract_data);
 
 #endif
