@@ -6,7 +6,7 @@
 /*   By: kmuhlbau <kmuhlbau@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/22 10:38:13 by kmuhlbau          #+#    #+#             */
-/*   Updated: 2024/11/28 14:11:10 by kmuhlbau         ###   ########.fr       */
+/*   Updated: 2024/12/03 16:40:04 by kmuhlbau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ int32_t	main(int argc, char **argv)
 	if (handle_args(argc, argv, &fract_data) != 0)
 		return (EXIT_FAILURE);
 	fract_data.mlx = mlx_init(WIDTH, HEIGHT, "Fract'ol", true);
+	if (!fract_data.mlx)
+		ft_error();
 	fract_data.img = mlx_new_image(fract_data.mlx, WIDTH, HEIGHT);
 	if (!fract_data.img || (mlx_image_to_window(fract_data.mlx, fract_data.img,
 				0, 0) < 0))
