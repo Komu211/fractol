@@ -6,7 +6,7 @@
 /*   By: kmuhlbau <kmuhlbau@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/27 21:59:58 by kmuhlbau          #+#    #+#             */
-/*   Updated: 2024/12/03 17:12:36 by kmuhlbau         ###   ########.fr       */
+/*   Updated: 2024/12/03 17:49:27 by kmuhlbau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ static void	handle_win_resize(t_fract_data *fract_data, t_dimensions win)
 t_complex	screen_to_plane(int x, int y, t_fract_data *fract_data)
 {
 	t_complex		plane_coord;
-	double		aspect_ratio;
-	double		scale;
+	double			aspect_ratio;
+	double			scale;
 	t_dimensions	win;
 
 	win.width = fract_data->mlx->width;
