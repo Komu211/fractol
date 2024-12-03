@@ -6,7 +6,7 @@
 /*   By: kmuhlbau <kmuhlbau@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/23 11:58:49 by kmuhlbau          #+#    #+#             */
-/*   Updated: 2024/12/03 21:43:33 by kmuhlbau         ###   ########.fr       */
+/*   Updated: 2024/12/03 22:01:32 by kmuhlbau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,8 @@ typedef enum e_scheme
 {
 	BLUE,
 	RED,
-	GREEN
+	GREEN,
+	PSYCHEDELIC
 }					t_scheme;
 
 typedef struct s_dimensions

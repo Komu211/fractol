@@ -6,7 +6,7 @@
 /*   By: kmuhlbau <kmuhlbau@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/24 15:20:34 by kmuhlbau          #+#    #+#             */
-/*   Updated: 2024/12/02 21:08:27 by kmuhlbau         ###   ########.fr       */
+/*   Updated: 2024/12/03 22:02:29 by kmuhlbau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ void	handle_keypress(void *param)
 	}
 	else if (mlx_is_key_down(mlx, MLX_KEY_C))
 	{
-		if (++fract_data->scheme % 3 == BLUE)
+		if (++fract_data->scheme % 4 == BLUE)
 			fract_data->scheme = BLUE;
 	}
 	handle_movement(fract_data, mlx);
