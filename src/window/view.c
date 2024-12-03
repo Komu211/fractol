@@ -6,7 +6,7 @@
 /*   By: kmuhlbau <kmuhlbau@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/24 17:58:36 by kmuhlbau          #+#    #+#             */
-/*   Updated: 2024/12/02 16:18:14 by kmuhlbau         ###   ########.fr       */
+/*   Updated: 2024/12/03 12:39:31 by kmuhlbau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,10 @@ void	render_fractal(t_fract_data *fract_data)
 	int	escape_time;
 
 	y = 0;
-	while (y < HEIGHT)
+	while (y < fract_data->mlx->height)
 	{
 		x = 0;
-		while (x < WIDTH)
+		while (x < fract_data->mlx->width)
 		{
 			if (fract_data->type == FRACTAL_MANDELBROT)
 				escape_time = mandelbrot(x, y, fract_data);
