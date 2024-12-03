@@ -6,7 +6,7 @@
 /*   By: kmuhlbau <kmuhlbau@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/24 18:08:17 by kmuhlbau          #+#    #+#             */
-/*   Updated: 2024/11/27 15:49:18 by kmuhlbau         ###   ########.fr       */
+/*   Updated: 2024/12/03 17:49:55 by kmuhlbau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	handle_args(int argc, char **argv, t_fract_data *fract_data)
 	{
 		if (argc != 4)
 		{
-			ft_printf("Usage for Julia set: ./fractol julia <real> <imaginary>\n");
+			ft_printf("Usage for Julia: ./fractol julia <real> <imaginary>\n");
 			return (EXIT_FAILURE);
 		}
 		fract_data->type = FRACTAL_JULIA;
