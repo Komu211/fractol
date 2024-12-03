@@ -6,7 +6,7 @@
 /*   By: kmuhlbau <kmuhlbau@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/24 15:22:33 by kmuhlbau          #+#    #+#             */
-/*   Updated: 2024/11/25 13:58:34 by kmuhlbau         ###   ########.fr       */
+/*   Updated: 2024/12/03 17:38:15 by kmuhlbau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	handle_scroll(double xdelta, double ydelta, void *param)
 	mlx = (mlx_t *)fract_data->mlx;
 	if (!mlx)
 		return ;
-	if (ydelta > 0)
+	if (ydelta > 0 && fract_data->zoom <= 30400760612153)
 		fract_data->zoom *= 1.1;
 	else if (ydelta < 0)
 		fract_data->zoom *= 0.9;
