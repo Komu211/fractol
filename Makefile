@@ -6,7 +6,7 @@ OUT_DIR = out
 LIBFT_DIR = libft
 LIBFT = $(LIBFT_DIR)/libft.a
 
-VPATH = $(SRC_DIR):$(SRC_DIR)/handlers:$(SRC_DIR)/fractals:$(SRC_DIR)/events:$(SRC_DIR)/window
+VPATH = $(SRC_DIR):$(SRC_DIR)/fractals:$(SRC_DIR)/events:$(SRC_DIR)/window
 
 # Main program sources
 SRCS = main.c \
@@ -25,7 +25,7 @@ OBJS = $(addprefix $(OUT_DIR)/, $(SRCS:.c=.o))
 
 # Compiler settings
 CC = cc
-CFLAGS = -Wall -Wextra -Werror -Ofast -fsanitize=address
+CFLAGS = -Wall -Wextra -Werror -Ofast
 INCLUDES = -I$(LIBFT_DIR)/includes -I. -Iincludes -IMLX42/include/MLX42
 
 # Detect system architecture and set GLFW paths accordingly
