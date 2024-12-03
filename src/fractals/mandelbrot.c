@@ -6,7 +6,7 @@
 /*   By: kmuhlbau <kmuhlbau@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/23 17:18:19 by kmuhlbau          #+#    #+#             */
-/*   Updated: 2024/11/27 22:00:36 by kmuhlbau         ###   ########.fr       */
+/*   Updated: 2024/12/03 16:32:12 by kmuhlbau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	mandelbrot(int x, int y, t_fract_data *fract_data)
 {
 	t_complex	z;
 	t_complex	c;
-	double		tmp;
+	long double		tmp;
 	int			i;
 
 	c = screen_to_plane(x, y, fract_data);

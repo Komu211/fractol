@@ -6,7 +6,7 @@
 /*   By: kmuhlbau <kmuhlbau@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/23 11:58:49 by kmuhlbau          #+#    #+#             */
-/*   Updated: 2024/12/02 21:05:20 by kmuhlbau         ###   ########.fr       */
+/*   Updated: 2024/12/03 16:33:43 by kmuhlbau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@
 
 typedef struct s_complex
 {
-	double			re;
-	double			im;
+	long double			re;
+	long double			im;
 }					t_complex;
 
 typedef enum e_fract_type
@@ -55,9 +55,9 @@ typedef struct s_fract_data
 	mlx_image_t		*img;
 	t_fract_type	type;
 	t_scheme		scheme;
-	double			zoom;
-	double			x_offset;
-	double			y_offset;
+	long double			zoom;
+	long double			x_offset;
+	long double			y_offset;
 	t_complex		julia;
 }					t_fract_data;
 

@@ -6,7 +6,7 @@
 /*   By: kmuhlbau <kmuhlbau@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/24 15:17:19 by kmuhlbau          #+#    #+#             */
-/*   Updated: 2024/11/27 21:59:04 by kmuhlbau         ###   ########.fr       */
+/*   Updated: 2024/12/03 16:32:07 by kmuhlbau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	julia(int x, int y, t_fract_data *fract_data, t_complex fixed)
 {
 	t_complex	z;
-	double		tmp;
+	long double		tmp;
 	int			i;
 
 	z = screen_to_plane(x, y, fract_data);
