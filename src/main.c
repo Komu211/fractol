@@ -6,7 +6,7 @@
 /*   By: kmuhlbau <kmuhlbau@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/22 10:38:13 by kmuhlbau          #+#    #+#             */
-/*   Updated: 2024/12/03 17:08:51 by kmuhlbau         ###   ########.fr       */
+/*   Updated: 2024/12/04 15:31:12 by kmuhlbau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static void	ft_error(void)
 {
-	fprintf(stderr, "%s", mlx_strerror(mlx_errno));
+	write(2, mlx_strerror(mlx_errno), ft_strlen(mlx_strerror(mlx_errno)));
 	exit(EXIT_FAILURE);
 }
 
@@ -30,7 +30,10 @@ int32_t	main(int argc, char **argv)
 	fract_data.img = mlx_new_image(fract_data.mlx, WIDTH, HEIGHT);
 	if (!fract_data.img || (mlx_image_to_window(fract_data.mlx, fract_data.img,
 				0, 0) < 0))
+	{
+		mlx_terminate(fract_data.mlx);
 		ft_error();
+	}
 	mlx_loop_hook(fract_data.mlx, &handle_keypress, &fract_data);
 	mlx_scroll_hook(fract_data.mlx, &handle_scroll, &fract_data);
 	mlx_loop(fract_data.mlx);
