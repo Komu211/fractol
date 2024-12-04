@@ -6,7 +6,7 @@
 /*   By: kmuhlbau <kmuhlbau@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/23 11:58:49 by kmuhlbau          #+#    #+#             */
-/*   Updated: 2024/12/04 15:22:54 by kmuhlbau         ###   ########.fr       */
+/*   Updated: 2024/12/04 17:53:44 by kmuhlbau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,7 @@ typedef struct s_fract_data
 	double			x_offset;
 	double			y_offset;
 	t_complex		julia;
+	t_dimensions	win;
 }					t_fract_data;
 
 void				handle_keypress(void *param);
