@@ -6,7 +6,7 @@
 /*   By: kmuhlbau <kmuhlbau@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/23 11:58:49 by kmuhlbau          #+#    #+#             */
-/*   Updated: 2024/12/03 22:01:32 by kmuhlbau         ###   ########.fr       */
+/*   Updated: 2024/12/04 14:59:01 by kmuhlbau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,12 @@
 
 # define WIDTH 1920
 # define HEIGHT 1080
+
+typedef struct s_cursor_pos
+{
+	uint32_t		x;
+	uint32_t		y;
+}					t_cursor_pos;
 
 typedef struct s_complex
 {
