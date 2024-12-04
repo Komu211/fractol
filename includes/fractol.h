@@ -6,7 +6,7 @@
 /*   By: kmuhlbau <kmuhlbau@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/23 11:58:49 by kmuhlbau          #+#    #+#             */
-/*   Updated: 2024/12/04 15:01:46 by kmuhlbau         ###   ########.fr       */
+/*   Updated: 2024/12/04 15:22:54 by kmuhlbau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,6 +81,5 @@ t_complex			screen_to_plane(int x, int y, t_fract_data *fract_data);
 uint32_t			escape_to_color(int escape_iter, int max_iter,
 						t_fract_data *fract_data);
 int					burning_ship(int x, int y, t_fract_data *fract_data);
-// int					nova(int x, int y, t_fract_data *fract_data);
 
 #endif
