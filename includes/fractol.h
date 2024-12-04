@@ -6,7 +6,7 @@
 /*   By: kmuhlbau <kmuhlbau@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/23 11:58:49 by kmuhlbau          #+#    #+#             */
-/*   Updated: 2024/12/04 14:59:01 by kmuhlbau         ###   ########.fr       */
+/*   Updated: 2024/12/04 15:01:46 by kmuhlbau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@
 
 typedef struct s_cursor_pos
 {
-	uint32_t		x;
-	uint32_t		y;
+	int32_t			x;
+	int32_t			y;
 }					t_cursor_pos;
 
 typedef struct s_complex
