@@ -6,22 +6,11 @@
 /*   By: kmuhlbau <kmuhlbau@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/27 21:59:58 by kmuhlbau          #+#    #+#             */
-/*   Updated: 2024/12/04 17:54:49 by kmuhlbau         ###   ########.fr       */
+/*   Updated: 2024/12/05 12:00:15 by kmuhlbau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
-
-static void	handle_win_resize(t_fract_data *fract_data, t_dimensions win)
-{
-	if (fract_data->win.width != win.width
-		|| fract_data->win.height != win.height)
-	{
-		mlx_resize_image(fract_data->img, win.width, win.height);
-		fract_data->win.width = win.width;
-		fract_data->win.height = win.height;
-	}
-}
 
 t_complex	screen_to_plane(int x, int y, t_fract_data *fract_data)
 {
@@ -32,7 +21,7 @@ t_complex	screen_to_plane(int x, int y, t_fract_data *fract_data)
 
 	win.width = fract_data->mlx->width;
 	win.height = fract_data->mlx->height;
-	handle_win_resize(fract_data, win);
+	mlx_resize_image(fract_data->img, win.width, win.height);
 	aspect_ratio = (double)win.width / win.height;
 	scale = 4.0;
 	if (aspect_ratio > 1.0)
