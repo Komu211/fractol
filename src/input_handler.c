@@ -6,7 +6,7 @@
 /*   By: kmuhlbau <kmuhlbau@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/24 18:08:17 by kmuhlbau          #+#    #+#             */
-/*   Updated: 2024/12/05 12:08:03 by kmuhlbau         ###   ########.fr       */
+/*   Updated: 2024/12/05 12:34:37 by kmuhlbau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int	handle_args(int argc, char **argv, t_fract_data *fract_data)
 		print_usage();
 		return (EXIT_FAILURE);
 	}
-	if (ft_strcmp(argv[1], "mandelbrot") == 0)
+	if ((ft_strcmp(argv[1], "mandelbrot") == 0) && argc == 2)
 		fract_data->type = FRACTAL_MANDELBROT;
 	else if (ft_strcmp(argv[1], "julia") == 0)
 	{
@@ -43,7 +43,7 @@ int	handle_args(int argc, char **argv, t_fract_data *fract_data)
 		}
 		fract_data->type = FRACTAL_JULIA;
 	}
-	else if (ft_strcmp(argv[1], "burning_ship") == 0)
+	else if ((ft_strcmp(argv[1], "burning_ship") == 0) && argc == 2)
 		fract_data->type = FRACTAL_BURNING_SHIP;
 	else
 	{
